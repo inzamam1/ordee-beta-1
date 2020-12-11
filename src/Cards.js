@@ -13,30 +13,30 @@ function Cards(){
     const[posts7,setPosts7] = useState([]);
     const[posts8,setPosts8] = useState([]);
     {
-      db.collection('posts1').doc('1').onSnapshot((doc) =>{
+      db.collection('posts').doc('1').onSnapshot((doc) =>{
         setPosts1(doc.data().table)
       });
   
-        db.collection('posts2').doc('2').onSnapshot((doc) =>{
+        db.collection('posts').doc('2').onSnapshot((doc) =>{
           setPosts2(doc.data().table)
         });
-        db.collection('posts3').doc('3').onSnapshot((doc) =>{
+        db.collection('posts').doc('3').onSnapshot((doc) =>{
           setPosts3(doc.data().table)
         });
   
-        db.collection('posts4').doc('4').onSnapshot((doc) =>{
+        db.collection('posts').doc('4').onSnapshot((doc) =>{
           setPosts4(doc.data().table)
         });
-        db.collection('posts5').doc('5').onSnapshot((doc) =>{
+        db.collection('posts').doc('5').onSnapshot((doc) =>{
           setPosts5(doc.data().table)
         });
-        db.collection('posts6').doc('6').onSnapshot((doc) =>{
+        db.collection('posts').doc('6').onSnapshot((doc) =>{
           setPosts6(doc.data().table)
         });
-        db.collection('posts7').doc('7').onSnapshot((doc) =>{
+        db.collection('posts').doc('7').onSnapshot((doc) =>{
           setPosts7(doc.data().table)
         });
-        db.collection('posts8').doc('8').onSnapshot((doc) =>{
+        db.collection('posts').doc('8').onSnapshot((doc) =>{
           setPosts8(doc.data().table)
         });
     }
@@ -78,7 +78,7 @@ function Cards(){
   
     return <div className="grid">
         {cardInfo.map((card,index) => {
-               return<Cardsflip key={index} card={card} />
+               return<Cardsflip card={card} key={card.id} />
         })
     }
     </div>

@@ -15,7 +15,7 @@ function Cardflip({card}) {
          </div>
          <div className = 'back'  >
              {card.text}
-       </div>
+        </div>
         </div>
         </div>
     )
