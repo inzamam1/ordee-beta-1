@@ -120,11 +120,3 @@ body {
   flex-basis: calc(25% - 40px);
 }
 
-.bill {
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-}
