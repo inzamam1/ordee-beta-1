@@ -7,7 +7,7 @@ import './Settings.css';
 import {FaPlusCircle} from 'react-icons/fa';
 
 function Settings({username}) {
-  const [id,setId] = useState(0);
+  const [id,setId] = useState(1);
   const Add_Card=(event)=>{
     setId(id + 1)
     event.preventDefault();

@@ -19,6 +19,7 @@ function LoginForm() {
   const [country,setCountry]=useState("");
   const [postalcode,setPostalCode]=useState("");
   const [password, setPassword] = useState("");
+  const [password1,setPassword1] = useState("");
   const [user, setUser] = useState(null);
 
   useEffect(() => {
@@ -41,22 +42,29 @@ function LoginForm() {
       .catch((error) => alert(error.message));
   };
   const SignUp = (event) => {
-    event.preventDefault();
-    auth
-      .createUserWithEmailAndPassword(email, password)
-      .then((cred) => {
-        return db.collection("Restaurant").doc(cred.user.uid).set({
-          Name: username,
-          Phone: phone,
-          Email: email,
-          Address1:"",
-          Address2:'',
-          State:'',
-          Country:'',
-          PostalCode:''
-        });
-      })
-      .catch((error) => alert(error.message));
+    if(password===password1){
+      event.preventDefault();
+      auth
+        .createUserWithEmailAndPassword(email, password)
+        .then((cred) => {
+          return db.collection("Restaurant").doc(cred.user.uid).set({
+            Name: username,
+            Phone: phone,
+            Email: email,
+            Address1:"",
+            Address2:'',
+            State:'',
+            Country:'',
+            PostalCode:''
+          });
+        })
+        .catch((error) => alert(error.message));
+    } else
+      {
+        alert('Password did not match!');
+      }
+    
+   
   };
 
   const google=(event)=>{
@@ -143,6 +151,12 @@ function LoginForm() {
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+              />
+              <input
+                type="password"
+                placeholder="Retype Password"
+                value={password1}
+                onChange={(e) => setPassword1(e.target.value)}
               />
               <button onClick={SignUp}>Sign Up</button>
               </form>

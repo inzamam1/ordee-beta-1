@@ -4,9 +4,7 @@ import { Link } from "react-router-dom";
 import './Navbar.css';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
-import * as IoIcons from 'react-icons/io';
 import {Sidebardata } from './Sidebardata';
-import { Button, Input } from "@material-ui/core";
 import {IconContext} from 'react-icons';
 
 
