@@ -1,18 +1,15 @@
 import "./App.css";
-import React, {useState,useEffect} from 'react';
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Admin from "./Admin";
-import LoginForm from './LoginForm';
-import Cards from "./Cards";
-import Loading from "./Loading";
-import Password_Reset from './Password__reset'
+import LoginForm from "./LoginForm";
+import Password_Reset from "./Password__reset";
 
 function App() {
-
   const [isLoading, setLoading] = useState(true);
 
   function fakeRequest() {
-    return new Promise(resolve => setTimeout(() => resolve(), 2500));
+    return new Promise((resolve) => setTimeout(() => resolve(), 2500));
   }
 
   useEffect(() => {
@@ -37,10 +34,10 @@ function App() {
             <Admin />
           </Route>
           <Route path="/Password__Reset">
-            <Password_Reset/>
+            <Password_Reset />
           </Route>
           <Route path="/">
-            <LoginForm/>
+            <LoginForm />
           </Route>
         </Switch>
       </div>
