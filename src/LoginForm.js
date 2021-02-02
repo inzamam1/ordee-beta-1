@@ -180,13 +180,13 @@ function LoginForm() {
               <div className="soical">
                 <ul class="social">
                   <li class="social">
-                    <button id="google" onClick={google}></button>
-                    <a href="#">
+                    
+                    <a >
                       <span></span>
                       <span></span>
                       <span></span>
                       <span></span>
-                      <span class="fa fa-google"></span>
+                      <span class="fa fa-google" onClick={google}></span>
                     </a>
                   </li>
                   <li class="social">
