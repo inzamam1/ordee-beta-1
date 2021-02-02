@@ -4,10 +4,6 @@ import * as RiIcons from 'react-icons/ri';
 import * as ImIcons from 'react-icons/im';
 import * as BiIcons from 'react-icons/bi';
 
-
-
-
-
 export const Sidebardata=[
     {
         title: 'Home',
