@@ -12,12 +12,6 @@ function Cardflip({ id, table, index, user }) {
     updatedS = time.s,
     updatedM = time.m;
 
-  useEffect(() => {
-    run();
-    setInterv(setInterval(run, 10));
-    console.log(table);
-  }, []);
-
   const run = () => {
     if (updatedS === 60) {
       updatedM++;
@@ -47,7 +41,7 @@ function Cardflip({ id, table, index, user }) {
     return (
       <img
         className="card"
-        src={"./bill.jpeg"}
+        src={"./bill1.jpg"}
         alt=""
         onClick={() => {
           if (window.confirm("Are you sure you want to remove?")) {
@@ -61,7 +55,7 @@ function Cardflip({ id, table, index, user }) {
     return (
       <img
         className="card"
-        src={"./waiter.jpeg"}
+        src={"./waiter1.jpg"}
         alt=""
         onClick={() => {
           if (window.confirm("Are you sure you want to remove?")) {
@@ -90,9 +84,6 @@ function Cardflip({ id, table, index, user }) {
         <div className="back">
           <h3>{id}</h3>
           {table}
-          <div className="timer">
-            <Timer time={time} />
-          </div>
         </div>
       </div>
     </div>

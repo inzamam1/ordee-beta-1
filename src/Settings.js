@@ -10,6 +10,7 @@ import { useStateValue } from "./StateProvider";
 function Settings({ username }) {
   const [id, setId] = useState(1);
   const [resty, dispatch] = useStateValue();
+  
 
   const R1 = () => {
     dispatch({
